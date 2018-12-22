@@ -1,14 +1,34 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
-html { 
-  background:  url(https://media.giphy.com/media/rHBPhbA7HnIbe/giphy.gif) no-repeat center center fixed; 
+/*html {
+  background:  url(https://media.giphy.com/media/rHBPhbA7HnIbe/giphy.gif) no-repeat center center fixed;
   background-size: cover;
+}*/
+html,body{
+    width:100%;
+    height:100%;
+    background:#111;
+}
+.btext{
+    /*color: #cc5500;*/
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    line-height: 0.4em;
 }
 h1{
-  font-family: 'Ubuntu Mono';
-  font-size: 3em;
-  margin: .2em .5em;
-  color: rgba(0,0,0, 0.3);
+    font-family: 'Ubuntu Mono';
+    font-size: 3em;
+    margin: .2em .5em;
+    /*color: rgba(243,81,0, 0.4);*/
+    color: rgba(255,90,0, 0.4);
 }
-body {
+#particles-js{
+    width: 100%;
     height: 100%;
+    background-color: #36454f;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }

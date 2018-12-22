@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Latent Sciences</title>
-
-      <style>
-      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
-html {
-  background:  url(https://media.giphy.com/media/rHBPhbA7HnIbe/giphy.gif) no-repeat center center fixed;
-  background-size: cover;
-}
-h1{
-  font-family: 'Ubuntu Mono';
-  font-size: 3em;
-  margin: .2em .5em;
-  color: rgba(0,0,0, 0.3);
-}
-body {
-    height: 100%;
-}
-
-    </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <!-- <title>Particles Webpage</title> -->
+    <title>Latent Sciences</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+    <div id="particles-js">
+        <div class="btext">
+            <h1>Latent Sciences</h1>
+            <!-- <p>Live to Code Another Day</p> -->
+            <!-- <a href="index.html" class="btn">Get Started</a> -->
+        </div>
+    </div>
 
-  <h1>Latent Sciences</h1>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
+    <script>
+        particlesJS.load('particles-js', 'particles.json',
+        function(){
+            console.log('particles.json loaded...')
+        })
+    </script>
 </body>
-
 </html>
