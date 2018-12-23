@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="gif"></div>
     <div id="particles-js">
         <div class="btext">
-            <h1>Latent Sciences</h1>
+            <!-- <h1>Latent Sciences</h1> -->
             <!-- <p>Live to Code Another Day</p> -->
             <!-- <a href="index.html" class="btn">Get Started</a> -->
         </div>
@@ -20,10 +21,13 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
+        document.addEventListener('click', e => {
+            document.getElementById('gif').classList.add('fade');
+        });
         particlesJS.load('particles-js', 'particles.json',
-        function(){
-            console.log('particles.json loaded...')
-        })
+            function(){ console.log('particles.json loaded...') }
+        )
+        document.getElementById('particles-js').addEventListener('mousemove', e => {});
     </script>
 </body>
 </html>
