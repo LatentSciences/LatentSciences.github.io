@@ -73,12 +73,23 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
-        document.addEventListener('click', e => {
-            document.getElementById('gif').classList.add('fade');
-        });
+        // https://jaketrent.com/post/handling-touch-click-browser/
+        function handleInteraction(evt) {
+            evt.preventDefault()
+            document.getElementById('gif').classList.add('fade')
+            console.log('interacted')
+        }
+        document.addEventListener('touchstart', handleInteraction)
+        document.addEventListener('click', handleInteraction)
+
+        // document.addEventListener('click', e => {
+        //     document.getElementById('gif').classList.add('fade');
+        // });
+
         particlesJS.load('particles-js', 'particles.json',
             function(){ console.log('particles.json loaded...') }
         )
+        // Re-enable particle.js mouse actions
         document.getElementById('particles-js').addEventListener('mousemove', e => {});
     </script>
 </body>
