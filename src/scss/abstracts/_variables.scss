@@ -29,15 +29,15 @@ $color: (
 // Typography ---------------------------------
 // --------------------------------------------
 $font__family: (
-	base: '"Montserrat", sans-serif', // font-family(base)
 	heading: '"Source Code Pro", monospace', // font-family(heading)
+	base: '"Montserrat", sans-serif', // font-family(base)
 	code: 'Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace', // font-family(code)
 	pre: '"Courier 10 Pitch", Courier, monospace' // font-family(pre)
 );
 
 $font__sizes: (
-	alpha:   ( 48px, 58px, 0px ), // font-size, line-height, kerning (use '0' if don't want to output any kerning)
-	beta:    ( 40px, 50px, -0.2px ),
+	alpha:   ( 60px, 70px, 0px ), // font-size, line-height, kerning (use '0' if don't want to output any kerning)
+	beta:    ( 48px, 58px, -0.2px ),
 	gamma:   ( 32px, 42px, -0.1px ),
 	delta:   ( 24px, 34px, -0.1px ),
 	epsilon: ( 20px, 32px, -0.1px ),
