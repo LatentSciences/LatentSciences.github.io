@@ -195,4 +195,21 @@
     }
   });
 
+  const dashobardWrapper = $('#page-dashboard');
+  if (dashobardWrapper.length > 0) {
+    const username = localStorage.getItem('username');
+    const password = localStorage.getItem('password');
+    if (!username || !password) {
+      window.location.replace(dashobardWrapper.attr('data-redirect-to'));
+    } else {
+      $('[data-var="username"]').text(username);
+    }
+  }
+
+  $('.sign-out-btn').click((e) => {
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    window.location.replace(dashobardWrapper.attr('data-redirect-to'));
+  });
+
 })(jQuery);
