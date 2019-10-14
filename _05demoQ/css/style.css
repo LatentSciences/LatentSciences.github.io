@@ -768,3 +768,9 @@ header .navbar .dropdown-menu a {
     display: inline-block;
     outline: #ff9f00 solid 2px;
 }
+
+
+input.has-error {
+  border-color: #d1001c;
+  border-width: 2px;
+}
