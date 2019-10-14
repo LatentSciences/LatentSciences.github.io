@@ -161,5 +161,38 @@
 	contentWayPoint();
 
 
+  //Custom from here
+
+  const defaultUsername = 'user';
+  const defaultPassword = 'pass';
+  const triggerError = (el, off) => {
+    if (typeof off == 'undefined') off = false;
+    off ? el.removeClass('has-error') : el.addClass('has-error');
+    return off;
+  };
+
+  $(document).on('keyup', 'input.has-error', (e) => {
+    $(e.target).removeClass('has-error');
+  });
+
+  //This is a non-secure simple dummy to allow for a pseudo dashboard login
+  $('#modalSignIn').submit((e) => {
+    e.preventDefault();
+    const userInput = $(e.target).find('#signin-username');
+    const passInput = $(e.target).find('#signin-password');
+    const username = userInput.val();
+    const password = passInput.val();
+    if (username === defaultUsername && password === defaultPassword) {
+      triggerError(userInput, 1);
+      triggerError(passInput, 1);
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+      window.location.href = e.target.getAttribute('action');
+    } else {
+      triggerError(userInput);
+      triggerError(passInput);
+      return;
+    }
+  });
 
 })(jQuery);
